@@ -1,4 +1,9 @@
-import { CheckCircle } from "lucide-react";
+import React from "react";
+import { 
+  CheckCircle2, 
+  ArrowRight,  
+  Zap,
+} from "lucide-react";
 
 const points = [
   "Grow your traffic & conversions",
@@ -9,55 +14,90 @@ const points = [
 
 const ResultsDriven = () => {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section 
+      className="relative py-12 overflow-hidden" // reduced from py-24
+      style={{
+        background: "linear-gradient(90deg, #201c4f 0%, #262361 50%, #2a276b 70%, #2e2c7d 100%)"
+      }}
+    >
+      {/* Background Atmosphere */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[100px] mix-blend-screen" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] mix-blend-screen" />
+      </div>
 
-        {/* Left – Product Mockup */}
-        <div className="relative">
-          <div className="bg-slate-100 rounded-xl shadow-xl p-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"> {/* reduced gap */}
+
+        {/* LEFT SIDE: Image */}
+        <div className="relative group z-20">
+          <div 
+            className="relative rounded-lg overflow-hidden 
+                       transform rotate-[-2deg] shadow-[0_6px_20px_rgb(0,0,0,0.25)] 
+                       transition-all duration-500 ease-out
+                       group-hover:rotate-0 group-hover:scale-[1.02]"
+          >
             <img
-              src="https://dummyimage.com/600x400/e5e7eb/9ca3af&text=Analytics+Dashboard"
-              alt="Analytics Dashboard"
-              className="rounded-lg"
+              src="./Result.jpg"
+              alt="Analytics Dashboard Results"
+              className="w-full h-auto object-cover"
             />
           </div>
+          <div className="absolute inset-0 bg-black/30 blur-[40px] -z-10 transform rotate-[-2deg] rounded-lg"></div>
         </div>
 
-        {/* Right – Content */}
+        {/* RIGHT SIDE: Content */}
         <div>
-          <h2 className="text-4xl font-bold text-textmain leading-tight">
+          <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-indigo-900/30 border border-indigo-500/30 mb-3 backdrop-blur-sm">
+            <Zap className="w-3 h-3 text-amber-300" />
+            <span className="text-xs font-bold text-indigo-100 uppercase tracking-widest">
+              High Impact Results
+            </span>
+          </div>
+
+          <h2 className="text-3xl lg:text-4xl font-bold text-white leading-snug mb-3">
             Results-Driven Strategies <br />
-            <span className="text-secondary">for Your Success</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-white to-purple-200">
+              for Your Success
+            </span>
           </h2>
 
-          <p className="mt-6 text-gray-600 max-w-lg">
-            Our approach combines cutting-edge technology, proven marketing
-            frameworks, and deep analytics to deliver consistent, scalable
-            growth.
+          <p className="text-base text-indigo-100/70 max-w-lg mb-6 leading-relaxed font-light">
+            We don't just rely on guesswork. Our approach combines cutting-edge technology, 
+            data-driven frameworks, and deep analytics to deliver consistent, scalable growth.
           </p>
 
-          {/* Bullet Points */}
-          <ul className="mt-8 space-y-4">
+          <ul className="space-y-3 mb-6"> {/* reduced spacing */}
             {points.map((point, index) => (
-              <li key={index} className="flex items-center gap-3">
-                <CheckCircle className="text-accent" size={22} />
-                <span className="text-gray-700 font-medium">
+              <li key={index} className="flex items-center gap-3 group">
+                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center 
+                                  group-hover:bg-emerald-500/20 group-hover:border-emerald-500/40 transition-all duration-300">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-indigo-300 group-hover:text-emerald-400 transition-colors" />
+                </div>
+                <span className="text-base text-indigo-50 font-medium group-hover:translate-x-1 transition-transform">
                   {point}
                 </span>
               </li>
             ))}
           </ul>
 
-          {/* CTA */}
-          <div className="mt-10">
+          <div className="flex items-center gap-3">
             <a
               href="#"
-              className="inline-block bg-secondary text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
+              className="group relative inline-flex items-center justify-center px-6 py-3 
+                         bg-white text-[#201c4f] rounded-full font-bold text-base overflow-hidden
+                         shadow-[0_0_15px_-5px_rgba(255,255,255,0.3)]
+                         hover:shadow-[0_0_25px_-5px_rgba(255,255,255,0.5)]
+                         transition-all duration-300"
             >
-              See How It Works
+              <span className="relative z-10 flex items-center gap-1">
+                See How It Works
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </div>
         </div>
+
       </div>
     </section>
   );
