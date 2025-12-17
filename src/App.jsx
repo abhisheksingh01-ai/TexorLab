@@ -1,22 +1,20 @@
-import Navbar from './components/navbar/Navbar';
-import HeroSection from './components/heroSection/HeroSection';
-import KeyServices from './components/KeyServices/KeyServices';
-import ResultsDriven from './components/ResultsDriven/ResultsDriven';
-import Testimonials from './components/Testimonials/Testimonials';
-import TrustedCompanies from './components/TrustedCompanies/TrustedCompanies';
-import ReadyToGrow from './components/ReadyToGrow/ReadyToGrow';
-import Footer from './components/Footer/Footer';
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Home from "./components/home/Home";
+import KeyServices from "./components/KeyServices/KeyServices";
+
+
 export default function App() {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <KeyServices/>
-      <ResultsDriven/>
-      <Testimonials/>
-      <TrustedCompanies/>
-      <ReadyToGrow/>
-      <Footer/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={< KeyServices />} />
+      </Routes>
+      <Footer />
     </>
-  )
+  );
 }
