@@ -41,8 +41,8 @@ const KeyServices = ({ limit = null }) => {
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-[300px] h-[300px] bg-indigo-600/10 rounded-full blur-[120px] mix-blend-overlay" />
-        <div className="absolute bottom-0 right-1/3 w-[250px] h-[250px] bg-purple-600/10 rounded-full blur-[120px] mix-blend-overlay" />
+        <div className="absolute top-0 left-1/3 w-75 h-75 bg-indigo-600/10 rounded-full blur-[120px] mix-blend-overlay" />
+        <div className="absolute bottom-0 right-1/3 w-62.5 h-62.5 bg-purple-600/10 rounded-full blur-[120px] mix-blend-overlay" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
@@ -58,8 +58,8 @@ const KeyServices = ({ limit = null }) => {
           <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
             Our Key{" "}
             <span className="relative whitespace-nowrap">
-              <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-indigo-500 to-purple-500 opacity-20"></span>
-              <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-white to-purple-200">
+              <span className="absolute -inset-1 blur-xl bg-linear-to-r from-indigo-500 to-purple-500 opacity-20"></span>
+              <span className="relative text-transparent bg-clip-text bg-linear-to-r from-indigo-200 via-white to-purple-200">
                 Services
               </span>
             </span>
@@ -79,8 +79,8 @@ const KeyServices = ({ limit = null }) => {
               <div
                 key={service.id}
                 style={{ transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)" }}
-                className="group relative h-full rounded-2xl p-[1px] transition-all duration-500
-                           bg-gradient-to-b from-white/10 via-white/5 to-transparent
+                className="group relative h-full rounded-2xl p-px transition-all duration-500
+                           bg-linear-to-b from-white/10 via-white/5 to-transparent
                            hover:from-indigo-400/50 hover:via-purple-400/50 hover:to-indigo-900/50
                            hover:-translate-y-1 hover:scale-[1.02]"
               >
@@ -88,10 +88,10 @@ const KeyServices = ({ limit = null }) => {
                                 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]
                                 group-hover:shadow-[inset_0_0_12px_rgba(99,102,241,0.2),0_15px_30px_-8px_rgba(30,27,79,0.8)] transition-all duration-500">
 
-                  <div className="absolute top-0 -left-full w-[60%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-25deg] group-hover:left-[130%] transition-all duration-1000 ease-in-out z-20 pointer-events-none"></div>
+                  <div className="absolute top-0 -left-full w-[60%] h-full bg-linear-to-r from-transparent via-white/10 to-transparent skew-x-[-25deg] group-hover:left-[130%] transition-all duration-1000 ease-in-out z-20 pointer-events-none"></div>
 
                   <div className="relative w-12 h-12 mb-4 rounded-2xl flex items-center justify-center z-20
-                                  bg-gradient-to-br from-white/10 to-white/0 border border-white/20
+                                  bg-linear-to-br from-white/10 to-white/0 border border-white/20
                                   shadow-[0_4px_8px_-2px_rgba(0,0,0,0.5)]
                                   group-hover:scale-105 group-hover:shadow-[0_10px_20px_-5px_rgba(99,102,241,0.5),inset_0_0_6px_rgba(99,102,241,0.2)]
                                   group-hover:border-indigo-400/50 transition-all duration-500">
@@ -145,7 +145,7 @@ const KeyServices = ({ limit = null }) => {
                 View All Universe
                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-indigo-600/40 via-purple-600/40 to-indigo-600/40 blur-md"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-r from-indigo-600/40 via-purple-600/40 to-indigo-600/40 blur-md"></div>
             </Link>
           </div>
         )}

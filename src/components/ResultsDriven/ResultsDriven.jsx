@@ -22,8 +22,8 @@ const ResultsDriven = () => {
     >
       {/* Background Atmosphere */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[100px] mix-blend-screen" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] mix-blend-screen" />
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-125 h-125 bg-indigo-600/10 rounded-full blur-[100px] mix-blend-screen" />
+        <div className="absolute bottom-0 right-0 w-100 h-100 bg-purple-600/10 rounded-full blur-[100px] mix-blend-screen" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"> {/* reduced gap */}
@@ -32,7 +32,7 @@ const ResultsDriven = () => {
         <div className="relative group z-20">
           <div 
             className="relative rounded-lg overflow-hidden 
-                       transform rotate-[-2deg] shadow-[0_6px_20px_rgb(0,0,0,0.25)] 
+                       transform -rotate-2 shadow-[0_6px_20px_rgb(0,0,0,0.25)] 
                        transition-all duration-500 ease-out
                        group-hover:rotate-0 group-hover:scale-[1.02]"
           >
@@ -42,7 +42,7 @@ const ResultsDriven = () => {
               className="w-full h-auto object-cover"
             />
           </div>
-          <div className="absolute inset-0 bg-black/30 blur-[40px] -z-10 transform rotate-[-2deg] rounded-lg"></div>
+          <div className="absolute inset-0 bg-black/30 blur-2xl -z-10 transform -rotate-2 rounded-lg"></div>
         </div>
 
         {/* RIGHT SIDE: Content */}
@@ -56,7 +56,7 @@ const ResultsDriven = () => {
 
           <h2 className="text-3xl lg:text-4xl font-bold text-white leading-snug mb-3">
             Results-Driven Strategies <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-white to-purple-200">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-200 via-white to-purple-200">
               for Your Success
             </span>
           </h2>
@@ -69,7 +69,7 @@ const ResultsDriven = () => {
           <ul className="space-y-3 mb-6"> {/* reduced spacing */}
             {points.map((point, index) => (
               <li key={index} className="flex items-center gap-3 group">
-                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center 
+                <div className="shrink-0 w-7 h-7 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center 
                                   group-hover:bg-emerald-500/20 group-hover:border-emerald-500/40 transition-all duration-300">
                   <CheckCircle2 className="w-3.5 h-3.5 text-indigo-300 group-hover:text-emerald-400 transition-colors" />
                 </div>
@@ -93,7 +93,7 @@ const ResultsDriven = () => {
                 See How It Works
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-r from-indigo-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </div>
         </div>
